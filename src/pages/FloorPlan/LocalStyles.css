@@ -1,0 +1,105 @@
+.Floor-Plan {
+  flex-direction: column;
+  display: flex;
+}
+
+.top-header {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  margin-top: 400px;
+  height: 30px;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.middle-headers {
+  display: flex;
+}
+
+.grid-1 {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  margin-left: 402px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+}
+
+.diode-1 {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+}
+
+.unmask-1 {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+}
+
+.ru-num-1 {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+}
+
+.seat-uuid {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  width: 1016px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-2 {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+}
+
+.diode-2 {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+}
+
+.unmask-2 {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+}
+
+.ru-num-2 {
+  border: 1px solid black;
+  background-color: #134877;
+  color: white;
+  display: flex;
+  justify-content: center;
+  writing-mode: vertical-lr;
+}
