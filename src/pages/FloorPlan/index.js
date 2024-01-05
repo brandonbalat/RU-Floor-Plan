@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './LocalStyles.css';
 import { sortRuData } from '../../utils/RuDataFormatter';
+import GridQuadrant from '../../components/GridQuadrant'
 
 function App() {
   let data = sortRuData()
@@ -20,6 +21,9 @@ function App() {
         <div className='unmask-2'> Unmask</div>
         <div className='diode-2'> Diode </div>
         <div className='grid-2'> Grid </div>
+      </div>
+      <div>
+        <GridQuadrant data={data} quadType='1' />
       </div>
     </div>
   );
