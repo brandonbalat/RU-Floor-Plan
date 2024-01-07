@@ -1,3 +1,7 @@
+.wrapper {
+  position: relative;
+}
+
 .Floor-Plan {
   flex-direction: column;
   display: flex;
@@ -7,7 +11,7 @@
   border: 1px solid black;
   background-color: #134877;
   color: white;
-  margin-top: 400px;
+  margin-top: 100px;
   height: 30px;
   width: 1200px;
   display: flex;
@@ -104,6 +108,20 @@
   writing-mode: vertical-lr;
 }
 
+.quad-wrapper {
+  display: flex;
+}
+
+.left-quads-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-quads-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .quad-1 {
   margin-top: -1.515px;
   margin-left: 701.4px;
@@ -112,6 +130,32 @@
   border: 1px solid black;
   border-spacing: 0px;
 }
+
+.quad-2 {
+  margin-top: 25px;
+  margin-left: 701.4px;
+  width: 560px;
+  height: 50px;
+  border: 1px solid black;
+  border-spacing: 0px;
+}
+
+.quad-3 {
+  margin-top: -1.515px;
+  width: 560px;
+  height: 50px;
+  border: 1px solid black;
+  border-spacing: 0px;
+}
+
+.quad-4 {
+  margin-top: 25px;
+  width: 560px;
+  height: 50px;
+  border: 1px solid black;
+  border-spacing: 0px;
+}
+
 
 td,
 tr {
@@ -142,4 +186,47 @@ tr {
 
 .diode-cell:hover {
   background-color: blue;
+}
+
+.diode-cell-highlighted {
+  background-color: blue;
+}
+
+.unmask-cell-highlighted {
+  background-color: yellow;
+}
+
+.midhalf {
+  border: 1px solid black;
+  margin-left: 701px;
+  margin-top: 501px;
+  position: fixed;
+  width: 1157px;
+  text-align: center;
+  font-weight: bold;
+  height: 25px;
+
+}
+
+.middle-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.middle-row-top {
+  margin-top: -1.515px;
+  margin-left: 0px;
+  width: 40px;
+  height: 502px;
+  border: 1px black;
+  border-spacing: 0px;
+}
+
+.middle-row-bottom {
+  margin-top: 25px;
+  margin-left: 0px;
+  width: 40px;
+  height: 502px;
+  border: 1px black;
+  border-spacing: 0px;
 }

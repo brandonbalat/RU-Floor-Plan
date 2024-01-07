@@ -36,6 +36,15 @@ const sortRuData = () => {
         stopPoint-- //Decrease stop point by 1
     }
 
+    dataToDisplay = dataToDisplay.map((product, index) => {
+        let tempObj = {}
+        tempObj['ru_num'] = index
+        tempObj['product'] = product
+
+        return tempObj
+    })
+
+
     return dataToDisplay
 }
 export {
