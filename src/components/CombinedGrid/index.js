@@ -3,6 +3,8 @@ import { getProductColor } from "../../utils/getProductColor"
 import GridQuadrant from "../GridQuadrant"
 import { v4 as uuidv4 } from 'uuid'
 import MiddleColumn from "../MiddleColumn"
+import GridNumberColumn from "../GridNumberColumn"
+import './LocalStyles.css';
 
 class CombinedGrid extends Component {
     constructor(props) {
@@ -60,8 +62,10 @@ class CombinedGrid extends Component {
                     </div>
                     <div className='quad-wrapper'>
                         <div className='left-quads-wrapper'>
+                            <GridNumberColumn gridNum={'1'} />
                             <GridQuadrant data={data} quadType='1' selectedDiodeCells={selectedDiodeCells ? selectedDiodeCells : []} selectedUnmaskCells={selectedUnmaskCells} setDiodes={this.updateSelectedDiodeCells} setUnmasks={this.updateSelectedUnmaskCells} />
                             <div className="midhalf">MIDHALF</div>
+                            <GridNumberColumn gridNum={'2'} />
                             <GridQuadrant data={data} quadType='2' selectedDiodeCells={selectedDiodeCells ? selectedDiodeCells : []} selectedUnmaskCells={selectedUnmaskCells} setDiodes={this.updateSelectedDiodeCells} setUnmasks={this.updateSelectedUnmaskCells} />
                         </div>
                         <div className="middle-wrapper">
@@ -69,8 +73,12 @@ class CombinedGrid extends Component {
                             <MiddleColumn rowCount={20} location='bottom' />
                         </div>
                         <div className='right-quads-wrapper'>
+                            <GridNumberColumn gridNum={'3'} />
                             <GridQuadrant data={data} quadType='3' selectedDiodeCells={selectedDiodeCells ? selectedDiodeCells : []} selectedUnmaskCells={selectedUnmaskCells} setDiodes={this.updateSelectedDiodeCells} setUnmasks={this.updateSelectedUnmaskCells} />
+                            <GridNumberColumn gridNum={'4'} />
                             <GridQuadrant data={data} quadType='4' selectedDiodeCells={selectedDiodeCells ? selectedDiodeCells : []} selectedUnmaskCells={selectedUnmaskCells} setDiodes={this.updateSelectedDiodeCells} setUnmasks={this.updateSelectedUnmaskCells} />
+                            <div className="io-column">I/O's</div>
+                            <div className="misc-block">MISC Block</div>
                         </div>
                     </div>
                 </div>

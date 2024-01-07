@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import { getProductColor } from "../../utils/getProductColor"
 import GridQuadrant from "../GridQuadrant"
 import { v4 as uuidv4 } from 'uuid'
+import './LocalStyles.css';
+
 
 class GridNumberColumn extends Component {
     constructor(props) {
@@ -9,20 +11,11 @@ class GridNumberColumn extends Component {
     }
 
     render() {
-        const { rowCount, location } = this.props
-        var iteratorArray = [...Array(rowCount)]
+        const { gridNum } = this.props
+
         return (
-            <div>
-                <table className={`middle-row-${location}`}>
-                    {iteratorArray.map((i) => {
-                        return (
-                            <tr>
-                                <td>
-                                </td>
-                            </tr>
-                        )
-                    })}
-                </table>
+            <div className={`grid-num-col-${gridNum}`}>
+                {gridNum}
             </div>
         )
 

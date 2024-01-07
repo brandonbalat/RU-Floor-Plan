@@ -1,0 +1,50 @@
+.grid-num-col-1 {
+    position: absolute;
+    height: 500px;
+    left: 678.5px;
+    width: 20px;
+    border: 1px solid black;
+    text-align: center;
+    writing-mode: vertical-lr;
+    background-color: black;
+    color: white;
+}
+
+.grid-num-col-2 {
+    position: absolute;
+    bottom: 0px;
+    height: 500px;
+    left: 678.5px;
+    width: 20px;
+    border: 1px solid black;
+    text-align: center;
+    writing-mode: vertical-lr;
+    background-color: #4B5320;
+    color: white;
+}
+
+.grid-num-col-3 {
+    position: absolute;
+    top: 203px;
+    height: 500px;
+    right: 0px;
+    width: 20px;
+    border: 1px solid black;
+    text-align: center;
+    writing-mode: vertical-rl;
+    background-color: #62924F;
+    color: white;
+}
+
+.grid-num-col-4 {
+    position: absolute;
+    bottom: 0px;
+    height: 500px;
+    right: 0px;
+    width: 20px;
+    border: 1px solid black;
+    text-align: center;
+    writing-mode: vertical-rl;
+    background-color: #2b6be4;
+
+}

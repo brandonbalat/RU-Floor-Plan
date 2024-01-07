@@ -82,13 +82,13 @@ class GridQuadrant extends Component {
                     <td className={selectedDiodeCells.includes(productData.ru_num.toString()) ? 'diode-cell-highlighted' : 'diode-cell'} onClick={(event) => this.handleClick(event, 'D')} id={`diode-cell-${productData.ru_num}`} ></td>
                     <td className={selectedUnmaskCells.includes(productData.ru_num.toString()) ? 'unmask-cell-highlighted' : 'unmask-cell'} onClick={(event) => this.handleClick(event, 'U')} id={`unmask-cell-${productData.ru_num}`}></td>
                     <td className="ru-num-cell">{productData.ru_num}</td>
-                    <td className="product-name-cell" style={{ backgroundColor: getProductColor(productData.product) }}>{productData.product}</td>
+                    <td className="product-name-cell" style={{ backgroundColor: getProductColor(productData.product), color: getProductColor(productData.product) === 'black' ? 'white' : "black" }}>{productData.product}</td>
                 </>
             )
         } else {
             return (
                 <>
-                    <td className="product-name-cell" style={{ backgroundColor: getProductColor(productData.product) }}>{productData.product}</td>
+                    <td className="product-name-cell" style={{ backgroundColor: getProductColor(productData.product), color: getProductColor(productData.product) === 'black' ? 'white' : "black" }}>{productData.product}</td>
                     <td className="ru-num-cell">{productData.ru_num}</td>
                     <td className={selectedUnmaskCells.includes(productData.ru_num.toString()) ? 'unmask-cell-highlighted' : 'unmask-cell'} onClick={(event) => this.handleClick(event, 'U')} id={`unmask-cell-${productData.ru_num}`}></td>
                     <td className={selectedDiodeCells.includes(productData.ru_num.toString()) ? 'diode-cell-highlighted' : 'diode-cell'} onClick={(event) => this.handleClick(event, 'D')} id={`unmask-cell-${productData.ru_num}`} ></td>

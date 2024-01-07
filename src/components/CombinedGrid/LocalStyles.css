@@ -1,0 +1,27 @@
+.io-column {
+    position: absolute;
+    height: 500px;
+    right: -60px;
+    width: 40px;
+    height: 1026px;
+    border: 1px solid black;
+    text-align: center;
+    writing-mode: horizontal-m;
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+}
+
+.misc-block {
+    position: absolute;
+    left: 771px;
+    bottom: -32px;
+    width: 1019px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    writing-mode: horizontal-m;
+    font-weight: bold;
+    display: grid;
+    align-items: center;
+}

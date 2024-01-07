@@ -12,6 +12,7 @@
   background-color: #134877;
   color: white;
   margin-top: 100px;
+  margin-left: 679px;
   height: 30px;
   width: 1200px;
   display: flex;
@@ -123,21 +124,22 @@
 }
 
 .quad-1 {
-  margin-top: -1.515px;
   margin-left: 701.4px;
   width: 560px;
   height: 50px;
   border: 1px solid black;
   border-spacing: 0px;
+  position: absolute;
 }
 
 .quad-2 {
-  margin-top: 25px;
+  margin-top: 526px;
   margin-left: 701.4px;
   width: 560px;
   height: 50px;
   border: 1px solid black;
   border-spacing: 0px;
+  position: relative;
 }
 
 .quad-3 {
@@ -198,10 +200,10 @@ tr {
 
 .midhalf {
   border: 1px solid black;
-  margin-left: 701px;
+  margin-left: 679px;
   margin-top: 501px;
   position: fixed;
-  width: 1157px;
+  width: 1200px;
   text-align: center;
   font-weight: bold;
   height: 25px;
