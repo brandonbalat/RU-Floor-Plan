@@ -13,9 +13,22 @@
 3. /src/app/components/CombinedGrid/index.js. This file, contains the parent component for GridQuadrant. State managed here
 
 # All other relevant files
-1. Everything in the components folder. most components have a index.js file and a LocalStyles.css file
+1. Everything in the components folder. Most components have a index.js file and a LocalStyles.css file
 2. Everything in the utils Folder. These are helper functions
 3. Everything in the pages folder. This is where the parent component is called.
+
+
+# General Thought Process
+More details can be found in the code comments, however in general here is how I went about this project.
+1. Algorith: I chose a process where we essentially alternate each product name to avoid adjacent product placement. Each time we place a product we subtract its repeat value, until 0. Once all repeat values are 0 the process is complete. This ensures no adjacent values. 
+2. Construct the table: This table structure is quite different than a typical table. To accomodate the layout, I decided to split it into multple pieces.
+3. I decided to construct all headers seperately from the grid to avoid worrying about how to accomplish the dual column design with a standard table
+4. The grid consists of essentially 4 quadrants so I made a quadrant component that allows us to instantiate it 4 times for 4 quadrants. Quad component is customizable in regards to which side of the grid its on based on props passed in.
+5. I made a parent component to call all of these grid piece components. This in my opinion makes the application structure cleaner, but also allows for the yellow highlighting on unmask cells.
+
+# Final thoughts
+Thank you for the oppurtunity as well as taking the time to read through my work. I enjoyed the challenge provided by this project and hope you enjoy the finished product I constructed. If you have any feedback or question, please feel free to contact me. In addition, I've provided my linkedin page for reference and contact info https://www.linkedin.com/in/brandonbalat/ 
+
 
 
 
