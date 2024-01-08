@@ -1,29 +1,21 @@
 import React, { Component } from "react"
 import { getProductColor } from "../../utils/getProductColor"
-import { v4 as uuidv4 } from 'uuid'
+import './LocalStyles.css';
 
 class GridQuadrant extends Component {
     constructor(props) {
         super(props)
 
+        //Initial state
         this.state = {
             selectedDiodeCells: [],
             selectedUnmaskCells: [],
-            toggle: 0
         }
         this.generateRow = this.generateRow.bind(this)
         this.handleClick = this.handleClick.bind(this)
     }
 
-    // componentDidUpdate(prevProps, prevState) {
-    //     const { selectedUnmaskCells, toggle } = this.state
-    //     const prevSelectedUnmaskCells = prevState.selectedUnmaskCells
-
-    //     if (prevSelectedUnmaskCells === null && selectedUnmaskCells !== null || prevSelectedUnmaskCells !== selectedUnmaskCells) {
-    //         this.setState({ toggle: toggle + 1 })
-    //     }
-    // }
-
+    //Handle click event on either cell type
     handleClick(event, cellType) {
         const { selectedDiodeCells, selectedUnmaskCells, setDiodes, setUnmasks } = this.props
         var id = event.target.id.split('-')[2] //Id of the cell we clicked on
@@ -32,12 +24,9 @@ class GridQuadrant extends Component {
         if (cellType === 'D') {
             //If id is not currently in state, add it (Highlight case)
             if (!(selectedDiodeCells.includes(id))) {
-                //this.setState({ selectedDiodeCells: [...selectedDiodeCells, id] })
                 setDiodes(id, 'A')
             } else {
                 //If id is already in state remove it (Un-highlight case)
-                //this.setState({ selectedDiodeCells: selectedDiodeCells.filter((selectedId) => selectedId !== id) })
-                console.log("AM I HERE?")
                 setDiodes(id, 'D')
 
             }
@@ -58,14 +47,12 @@ class GridQuadrant extends Component {
             if (!(selectedUnmaskCells.includes(id))) {
                 //If id is not in state...
                 //Write the id's we found to state for highlighting
-                //this.setState({ selectedUnmaskCells: [...new Set([...selectedUnmaskCells, ...sameProducts])] })
-                setUnmasks(sameProducts, 'A')
+                setUnmasks(sameProducts, 'A') //Give back to call back
 
             } else {
                 //Un-highlight case
                 //If id already in state, remove all associated IDs from state
-                //this.setState({ selectedUnmaskCells: selectedUnmaskCells.filter((selectedId) => !sameProducts.includes(selectedId)) })
-                setUnmasks(sameProducts, 'D')
+                setUnmasks(sameProducts, 'D') //Give back to callback
             }
         }
 
@@ -74,8 +61,11 @@ class GridQuadrant extends Component {
     }
 
     generateRow(productData, quadType) {
+        //Generates each row of the quadrant
         const { selectedDiodeCells, selectedUnmaskCells } = this.props
 
+        //If quad 1 or 2 generate quadrant with left header orientation
+        //If state updates cell highlighting is handled by changing the classname below.
         if (quadType === '1' || quadType === '2') {
             return (
                 <>
@@ -86,6 +76,7 @@ class GridQuadrant extends Component {
                 </>
             )
         } else {
+            //Else right quadrant orientation
             return (
                 <>
                     <td className="product-name-cell" style={{ backgroundColor: getProductColor(productData.product), color: getProductColor(productData.product) === 'black' ? 'white' : "black" }}>{productData.product}</td>
@@ -99,24 +90,30 @@ class GridQuadrant extends Component {
     }
 
     render() {
+        //Props
         const { data, quadType } = this.props
 
+        //Initialze array to hold data to display, based on quadType. Holds 20 elements per quad type
         var quadData = []
 
+        //If 1 get the first 20 elements
         if (quadType === '1') {
             quadData = data.slice(0, 20)
         } else if (quadType === '2') {
+            //If 2 get elements 20-40
             quadData = data.slice(20, 40)
         } else if (quadType === '3') {
+            //If 3 get elements 40-60
             quadData = data.slice(40, 60)
         } else {
+            //If 4 get elements 60-80
             quadData = data.slice(60, 80)
         }
 
+        //Write table tags and loop through the data calling generateRow each iteration
         return (
             <div>
                 <table className={`quad-${quadType}`} id={`quad-${quadType}`}>
-
                     {quadData.map((product) => {
                         return (
                             <tr key={`quad-${quadType}-row-${product.ru_num}`}>

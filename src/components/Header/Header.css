@@ -1,0 +1,19 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    color: white;
+    padding: 10px 0;
+    background-color: #0071c5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 20px;
+    text-align: start;
+}
+
+.Header-logo {
+    height: 46px;
+    margin-right: 15px;
+    margin-left: 15px;
+}

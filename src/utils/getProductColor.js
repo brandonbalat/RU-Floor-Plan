@@ -1,3 +1,4 @@
+//Helper Function gets what color Seat UUID cell should be based on product name, each case sets a color and returns to GridQuad component
 const getProductColor = (product) => {
     var color = ''
     switch (product) {

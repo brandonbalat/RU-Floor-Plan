@@ -1,4 +1,8 @@
-import originalDataSet from './dataset.json'
+import dataset from '../tests/dataset.json'
+import dataset2 from '../tests/dataset2.json'
+import dataset3 from '../tests/dataset3.json'
+import dataset4 from '../tests/dataset.json'
+
 
 /******************* PROBLEM BREAKDOWN ******************************************************************************************************************************
  * 1. We are provided a JSON data set (array of objects). Each object has 2 key/value pairs product and repeat.
@@ -18,10 +22,31 @@ import originalDataSet from './dataset.json'
  * 
 */
 const sortRuData = () => {
+    //TEST SET UP, CHANGE test_num to 1-4 to use a different data set
+    var test_num = 1
+    var originalDataSet = ''
+    if (test_num === 1) {
+        originalDataSet = dataset
+    } else if (test_num === 2) {
+        originalDataSet = dataset2
+    } else if (test_num === 3) {
+        originalDataSet = dataset3
+    } else if (test_num === 4) {
+        originalDataSet = dataset4
+    }
+
+
+    //BEGIN SORTING
     const copyOfData = JSON.parse(JSON.stringify(originalDataSet)) //Get a copy of the data set, so we don't actually modify the original data.
     var dataSortedByRepeat = copyOfData.sort((a, b) => b.repeat - a.repeat) //Sort data by repeat value, descending order
     var dataToDisplay = [] //Final data set 
-    var stopPoint = dataSortedByRepeat[0].repeat //Find the largest repeat value in the data set
+    var stopPoint = Number(dataSortedByRepeat[0].repeat) //Find the largest repeat value in the data set
+
+    //IF largest repeat value is greater than second largest by more than 1. Impossible to prevent adjacent repeats fail.
+    if ((stopPoint - Number(dataSortedByRepeat[1].repeat)) > 1) {
+        console.error("Invalid dataset, Product: ", dataSortedByRepeat[0].product, " is has a repeat value that is too large.")
+        return null
+    }
 
     //While stopPoint is greater than 0
     while (stopPoint > 0) {
@@ -30,7 +55,7 @@ const sortRuData = () => {
 
             if (dataSortedByRepeat[i].repeat === 0) continue //If elements repeat value is 0 skip
 
-            dataToDisplay.push(dataSortedByRepeat[i].product) //Push product name to array
+            dataToDisplay.push(dataSortedByRepeat[i].product) //Push prodduct name to array
             dataSortedByRepeat[i].repeat = dataSortedByRepeat[i].repeat - 1 //Decrease current elements repeat value by 1
         }
         stopPoint-- //Decrease stop point by 1

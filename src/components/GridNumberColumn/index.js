@@ -1,15 +1,10 @@
-import React, { Component } from "react"
-import { getProductColor } from "../../utils/getProductColor"
-import GridQuadrant from "../GridQuadrant"
-import { v4 as uuidv4 } from 'uuid'
+import React, { PureComponent } from "react"
 import './LocalStyles.css';
 
 
-class GridNumberColumn extends Component {
-    constructor(props) {
-        super(props)
-    }
+class GridNumberColumn extends PureComponent {
 
+    //Generic component to easily reuse grid column for each quadrant
     render() {
         const { gridNum } = this.props
 
