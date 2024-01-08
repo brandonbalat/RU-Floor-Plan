@@ -32,7 +32,10 @@ More details can be found in the code comments, however in general here is how I
 5. I made a parent component to call all of these grid piece components. This in my opinion makes the application structure cleaner, but also allows for the yellow highlighting on unmask cells.
 
 # Final thoughts
-Thank you for the oppurtunity as well as taking the time to read through my work. I enjoyed the challenge provided by this project and hope you enjoy the finished product I constructed. If you have any feedback or question, please feel free to contact me. In addition, I've provided my linkedin page for reference and contact info https://www.linkedin.com/in/brandonbalat/ 
+Thank you for the oppurtunity as well as taking the time to read through my work. I enjoyed the challenge provided by this project and hope you enjoy the finished product I constructed. If you have any feedback or question, please feel free to contact me. In addition, I've provided my linkedin page for reference and contact info https://www.linkedin.com/in/brandonbalat/
+
+# Intended Output
+![image](https://github.com/brandonbalat/RU-Floor-Plan/assets/20885452/1955f6e2-acc0-4d21-86a4-cd2dbec8a637)
 
 
 
