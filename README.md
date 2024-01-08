@@ -17,6 +17,11 @@
 2. Everything in the utils Folder. These are helper functions
 3. Everything in the pages folder. This is where the parent component is called.
 
+# Testing
+To accomodate your different test cases I have already created 4 test files, located in the Tests folder. You can paste any of your test cases there.
+1. Once you have your test cases pasted in. All you will need to do is head to line 26 of RuDataFormatter.js
+2. On that line you'll notice a variable named 'test_num' simply change that number to the corresponding test file number and this will change the data on the grid.
+
 
 # General Thought Process
 More details can be found in the code comments, however in general here is how I went about this project.
